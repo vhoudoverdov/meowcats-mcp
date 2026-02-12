@@ -14,8 +14,11 @@ A good place to start with implementing a new MCP server is by studying the exam
 
 The theory behind the example allows us to extend this functionality to other APIs.  meowfacts-mcp uses the code in the example as a boilerplate starting point to develop a new MCP server which exposes a tool which allows the LLM to return a random cat fact.
 
-### Setup
-You can build this MCP server from scratch by following these steps:
+### Server Setup
+
+You can build this MCP server from scratch by following the below steps. 
+
+The uv utilities will handle the generation of the main.py file and a few other boilerplate items.
 ```
 # Create a new directory for the meowfacts server
 mkdir meowfacts-server
@@ -26,5 +29,39 @@ uv init
 uv add "mcp[cli]" httpx
 
 # Create the meowfacts.py file
-new-item meowfats.py
+new-item meowfacts.py
+```
+
+You can populate the empty meowfacts.py file with the content in meowfacts.py in this repository.
+
+### Client Setup
+Like other MCP servers, leveraging the meowfacts MCP server involves specifying the server in our corresponding settings file.   In a MCP client like Gemini CLI, this is done by modifying settings.json in the Gemini working directory in order to define the new server, so let's do that.
+
+Let's assume we created the server in the directory C:\Users\sysop\meowfacts-server.  The corresponding settings.json config would look like the following:
+
+```
+{
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "ui": {
+    "showHomeDirectoryWarning": false
+  },
+  "general": {
+    "previewFeatures": true
+  },
+  "mcpServers": {
+    "meowfacts": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:\\Users\\sysop\\meowfacts-server",
+        "run",
+        "meowfacts.py"
+      ]
+    }
+  }
+}
 ```
