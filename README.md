@@ -1,6 +1,6 @@
 # meowfacts-mcp
 
-This repository is designed to be a tutorial for building very simple MCP servers. It allows us to study the underlying components of MCP servers (like python scripts) using a public API called [meowfacts](https://github.com/wh-iterabb-it/meowfacts) by [wh-iterabb-it](https://github.com/wh-iterabb-it/), which returns a random cat fact as a response to requests.
+This repository is designed to be a tutorial for building very simple MCP servers. It allows us to study the underlying components of MCP servers, like python scripts that handle the abstraction of underlying APIs for MCP clients.  In this tutorial we'll be using a public API called [meowfacts](https://github.com/wh-iterabb-it/meowfacts) by [wh-iterabb-it](https://github.com/wh-iterabb-it/), which returns a random cat fact as a response to requests.
 
 This server uses much of the same boilerlate used by the tutorial example on  [modelcontextprotocol.io](https://modelcontextprotocol.io/docs/develop/build-server#weather-api-issues)  and shows how the tutorial can be easily leveraged to create other simple MCP servers.
 
