@@ -1,4 +1,5 @@
-# meowfacts-mcp - A MCP Server for returning random cat facts
+# meowfacts-mcp
+### A MCP Server for returning random cat facts
 
 This repository is designed to be a tutorial for building very simple MCP (Model Context Protocol) servers. It allows us to study the underlying components of MCP servers, like the python scripts that handle abstraction of APIs for MCP clients.  In this tutorial we'll be using a public API called [meowfacts](https://github.com/wh-iterabb-it/meowfacts) by [wh-iterabb-it](https://github.com/wh-iterabb-it/), which returns a random cat fact as a response to requests.
 
