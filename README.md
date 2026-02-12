@@ -70,7 +70,7 @@ With both the MCP Server and MCP Client set up, our architecture is complete and
 
 We can now proceed to ask Gemini CLI to give us a random cat fact!  Enter the following prompt: `Give me a random cat fact`
 
-Gemini CLI will locate the correct tool to use based on the prompt, which in our case is the `get_cat_fact tool` in our new meowfacts MCP server.  
+Gemini CLI will locate the correct tool to use based on the prompt, which in our case is the `get_cat_fact` tool in our new meowfacts MCP server.  
 
 Gemini CLI will ask us to confirm we want to run this tool.  Select `Allow Once` so we can run the tool and see what random cat fact we get!
 
