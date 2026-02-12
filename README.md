@@ -1,5 +1,5 @@
 # meowfacts-mcp
-### A MCP Server for returning random cat facts
+### MCP Server for returning random cat facts
 
 This repository is designed to be a tutorial for building very simple MCP (Model Context Protocol) servers. It allows us to study the underlying components of MCP servers, like the python scripts that handle abstraction of APIs for MCP clients.  In this tutorial we'll be using a public API called [meowfacts](https://github.com/wh-iterabb-it/meowfacts) by [wh-iterabb-it](https://github.com/wh-iterabb-it/), which returns a random cat fact as a response to requests.
 
@@ -7,7 +7,7 @@ This server uses much of the same boilerlate used by the tutorial example on [mo
 
 ### Introduction
 
-**MCP servers** allow Large Language Models (LLMs) to interact with external data sources and APIs.  The MCP protocol facilitates this interaction using a client/server model which abstracts a significant amount of the effort that would typically be involved in running API commands, parsing results, and maintaining scripts.
+MCP servers allow Large Language Models (LLMs) to interact with external data sources and APIs.  The MCP protocol facilitates this interaction using a client/server model which abstracts a significant amount of the effort that would typically be involved in running API commands, parsing results, and maintaining scripts.
 
 A good place to start with implementing a new MCP server is by studying the example on [modelcontextprotocol.io](https://modelcontextprotocol.io/docs/develop/build-server#weather-api-issues).  This example uses the National Weather Service (NWS) API to create an MCP server that exposes two tools:  A tool for getting weather advisories given a state, and a tool for getting weather forecasts given a latitude and longitude coordinate pair.
 
@@ -31,12 +31,12 @@ uv add "mcp[cli]" httpx
 New-Item meowfacts.py
 ```
 
-You can populate the empty meowfacts.py file with the content in meowfacts.py in this repository.
+You can populate the empty meowfacts.py file with the content of meowfacts.py in this repository.
 
 ### Client Setup
 Like other MCP servers, leveraging the meowfacts MCP server involves specifying the server in our settings file.   In a MCP client like Gemini CLI, this is done by modifying `settings.json` in the Gemini working directory in order to define the new server, so let's do that.
 
-Let's assume we created the server in the directory C:\Users\sysop\meowfacts-server.  The corresponding settings.json config would look like the following:
+Let's assume we created the server in the directory C:\Users\sysop\meowfacts-server.  Our `settings.json` for this setup would look similar to the following.  If you have other MCP servers defined, you would just introduce the meowfacts object into the existing mcpServers object alongside the existing MCP servers.  In the following example, only one MCP server is defined: meowfacts.
 
 ```
 {
