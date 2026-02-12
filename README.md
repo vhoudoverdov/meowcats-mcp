@@ -4,8 +4,6 @@ This repository is designed to be a tutorial for building very simple MCP server
 
 This server uses much of the same boilerlate used by the tutorial example on  [modelcontextprotocol.io](https://modelcontextprotocol.io/docs/develop/build-server#weather-api-issues)  and shows how the tutorial can be easily leveraged to create other simple MCP servers.
 
-A collection of small security utilities, including tools for parsing Loki IOC logs, configuring host-based IDS, timestomping files, and more.
-
 ### Introduction
 
 MCP servers allow Large Language Models (LLMs) to interact with external data sources and APIs.  The MCP protocol facilitates this interaction using a client/server model which abstracts a significant amount of the effort that would typically be involved in running API commands, parsing results, and maintaining scripts.
