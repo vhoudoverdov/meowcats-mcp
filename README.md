@@ -74,11 +74,11 @@ Gemini CLI will locate the correct tool to use based on the prompt, which in our
 
 Gemini CLI will ask us to confirm we want to run this tool.  Select `Allow Once` so we can run the tool and see what random cat fact we get!
 
-![Output of running /mcp list](img/mcplist.png)
+![Output of running /mcp list](img/mcptoolconfirmation.png)
 
 #### The result
-Gemini CLI displays our random cat fact: `In 1987 cats overtook dogs as the number one pet in America.`  Who knew!
+Gemini CLI displays our random cat fact: `In 1987 cats overtook dogs as the number one pet in America.`  
+
+Who knew!
 
 ![Output of running /mcp list](img/catfact.png)
-
-
