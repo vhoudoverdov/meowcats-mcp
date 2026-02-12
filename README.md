@@ -13,6 +13,11 @@ A good place to start with implementing a new MCP server is by studying the exam
 
 The theory behind the example allows us to extend this functionality to other APIs.  meowfacts-mcp uses the code in the example as a starting point to develop a new MCP server which exposes a tool which allows the LLM to return a random cat fact.
 
+### Our Target API
+By studying the meowfacts API in the original project, we can see that the API consists of one endpoint: `https://meowfacts.herokuapp.com/`
+
+This API endpoint accepts GET requests, and while it supports a few more advanced parameters (like language support and support for finding facts by ID), we'll keep the initial version of our MCP server simple by only implementing the API call that returns a single random fact, which in our case is going to be `GET https://meowfacts.herokuapp.com/`
+
 ### Server Setup
 
 You can build this MCP server from scratch by following the below steps. `uv` will handle the generation of the main.py file and a few other boilerplate items.
