@@ -65,4 +65,4 @@ Let's assume we created the server in the directory C:\Users\sysop\meowfacts-ser
 
 ### Testing
 With both the MCP Server and MCP Client set up, our architecture is complete and we can proceed to testing!  After saving `settings.json` and starting Gemini CLI, we can verify that the meowfacts MCP server is running by typing **/mcp list**.
-![Output of running /mcp list]('img/mcp list.png')
+![Output of running /mcp list]('img/mcplist.png')
