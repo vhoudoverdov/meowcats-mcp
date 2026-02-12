@@ -88,8 +88,9 @@ Gemini CLI will ask us to confirm we want to run this tool.  Select `Allow Once`
 Gemini CLI displays our random cat fact: `In 1987 cats overtook dogs as the number one pet in America.`  
 
 Who knew!
-
+```
        |\      _,,,---,,_
  ZZzzz /,`.-'`'    -.  ;-;;,_
       |,*-  ) )-,_. ,\ (  `'-'
      `'---''(_/--'  `-'\_)
+```
