@@ -15,3 +15,16 @@ A good place to start with implementing a new MCP server is by studying the exam
 The theory behind the example allows us to extend this functionality to other APIs.  meowfacts-mcp uses the code in the example as a boilerplate starting point to develop a new MCP server which exposes a tool which allows the LLM to return a random cat fact.
 
 ### Setup
+You can build this MCP server from scratch by following these steps:
+```
+# Create a new directory for the meowfacts server
+mkdir meowfacts-server
+cd meowfacts-server
+
+# Activate the python virtual environment
+uv init
+uv add "mcp[cli]" httpx
+
+# Create the meowfacts.py file
+new-item meowfats.py
+```
