@@ -3,8 +3,6 @@
 
 This repository is designed to be a tutorial for building very simple MCP (Model Context Protocol) servers. It allows us to study the underlying components of MCP servers, like the python scripts that handle abstraction of APIs for MCP clients.  In this tutorial we'll be using a public API called [meowfacts](https://github.com/wh-iterabb-it/meowfacts) by [wh-iterabb-it](https://github.com/wh-iterabb-it/), which returns a random cat fact as a response to requests.
 
-This server uses much of the same boilerlate code used by the tutorial example on [modelcontextprotocol.io](https://modelcontextprotocol.io/docs/develop/build-server#weather-api-issues) and shows how that tutorial example can be leveraged to create other simple MCP servers.
-
 ### Introduction
 
 MCP servers allow Large Language Models (LLMs) to interact with external data sources and APIs.  The MCP protocol facilitates this interaction using a client/server model which abstracts a significant amount of the effort that would typically be involved in running API commands, parsing results, and maintaining scripts.
@@ -16,11 +14,13 @@ The theory behind the example allows us to extend this functionality to other AP
 ### Our Target API
 By studying the meowfacts API in the original project, we can see that the API consists of one endpoint: `https://meowfacts.herokuapp.com/`
 
-This API endpoint accepts GET requests, and while it supports a few more advanced parameters (like language support and support for finding facts by ID), we'll keep the initial version of our MCP server simple by only implementing the API call that returns a single random fact, which in our case is going to be a `GET` request to `https://meowfacts.herokuapp.com/`
+This API endpoint accepts `GET` requests, and while it supports a few more advanced parameters (like language support and support for finding facts by ID), we'll keep the initial version of our MCP server simple by only implementing the API call that returns a single random fact, which in our case is going to be a `GET` request to `https://meowfacts.herokuapp.com/`
 
 ### Server Setup
 
-You can build this MCP server from scratch by following the below steps. `uv` will handle the generation of the main.py file and a few other boilerplate items.
+You can build this MCP server from scratch by following the below steps. 
+
+`uv` will handle the generation of the environment, and we'll create a file called meowfacts.py to hold the server.
 ```
 # Create a new directory for the meowfacts server
 mkdir meowfacts-server
@@ -69,7 +69,9 @@ Let's assume we created the server in the directory C:\Users\sysop\meowfacts-ser
 ```
 
 ### Testing
-With both the MCP Server and MCP Client set up, our architecture is complete and we can proceed to testing!  After saving `settings.json` and starting Gemini CLI, we can verify that the meowfacts MCP server is running by typing **/mcp list**.
+With both the MCP Server and MCP Client set up, our architecture is complete and we can proceed to testing!  
+
+After saving `settings.json` and starting Gemini CLI, we can verify that the meowfacts MCP server is running by typing `/mcp list`
 
 ![Output of running /mcp list](img/mcplist.png)
 
@@ -85,7 +87,8 @@ Gemini CLI will ask us to confirm we want to run this tool.  Select `Allow Once`
 
 ![Output of running /mcp list](img/catfact.png)
 
-Gemini CLI displays our random cat fact: `In 1987 cats overtook dogs as the number one pet in America.`  
+Gemini CLI displays our random cat fact: 
+`In 1987 cats overtook dogs as the number one pet in America.`  
 
 Who knew!
 ```
